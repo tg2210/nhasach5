@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Thành Viên</title>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Định dạng menu chính */
+.menu-bar ul {
+    list-style-type: none;
+    display: flex;
+    background-color: #4CAF50;
+    padding: 10px;
+}
+
+.menu-bar ul li {
+    margin-right: 20px;
+}
+
+.menu-bar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu-bar ul li input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.menu-bar ul li button {
+    padding: 5px 10px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Định dạng container chính */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Menu bên trái */
+.left-menu, .right-menu {
+    width: 200px;
+}
+
+.menu-section {
+    background-color: #e9ecef;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.menu-section h3 {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.menu-section ul {
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+.menu-section ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Form đăng ký */
+.registration-form {
+    width: 600px;
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #007bff;
+}
+
+.registration-form h2 {
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 20px;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+.form-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 300px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+.btn-register, .btn-cancel {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+</style>
+</head>
+<body>
+    <!-- Thanh menu -->
+    <div class="menu-bar">
+        <ul>
+            <li><a href="trangchu.html">TRANG CHỦ</a></li>
+            <li><a href="gioithieu.html">GIỚI THIỆU</a></li>
+            <li><a href="#">LIÊN HỆ</a></li>
+            <li><input type="text" placeholder="Hãy nhập tên sách cần tìm..."></li>
+            <li><button>Tìm sách</button></li>
+        </ul>
+    </div>
+
+    <!-- Phần nội dung chính -->
+    <div class="container">
+        <!-- Menu trái -->
+        <div class="left-menu">
+            <div class="menu-section">
+                <h3>SÁCH THEO CHỦ ĐỀ</h3>
+                <ul>
+                    <li>Ngoại Ngữ</li>
+                    <li>Công nghệ thông tin</li>
+                    <li>Luật</li>
+                    <li>Văn học</li>
+                    <li>Khoa học kỹ thuật</li>
+                    <li>Nông nghiệp</li>
+                    <li>Lịch sử địa lý</li>
+                    <li>Kinh tế</li>
+                    <li>Nghệ thuật sống</li>
+                </ul>
+            </div>
+
+            <div class="menu-section">
+                <h3>SÁCH THEO NHÀ XUẤT BẢN</h3>
+                <ul>
+                    <li>Nhà xuất bản trẻ</li>
+                    <li>NXB thống kê</li>
+                    <li>Kim đồng</li>
+                    <li>Đại học quốc gia</li>
+                    <li>Văn hóa nghệ thuật</li>
+                    <li>Văn hóa</li>
+                    <li>Lao động - xã hội</li>
+                    <li>Khoa học & kỹ thuật</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Form đăng ký -->
+        <div class="registration-form">
+            <h2>ĐĂNG KÝ THÀNH VIÊN</h2>
+
+            <div class="form-section">
+                <h3>Thông tin cá nhân</h3>
+                <label for="fullname">Họ và tên:</label>
+                <input type="text" id="fullname" placeholder="Nhập họ và tên"><br>
+
+                <label for="dob">Ngày sinh:</label>
+                <input type="text" id="dob" placeholder="Ngày"><input type="text" placeholder="Tháng"><input type="text" placeholder="Năm"><br>
+
+                <label>Giới tính:</label>
+                <input type="radio" id="male" name="gender" value="Nam"><label for="male">Nam</label>
+                <input type="radio" id="female" name="gender" value="Nữ"><label for="female">Nữ</label><br>
+
+                <label for="address">Địa chỉ:</label>
+                <input type="text" id="address" placeholder="Nhập địa chỉ"><br>
+
+                <label for="phone">Điện thoại:</label>
+                <input type="text" id="phone" placeholder="Nhập số điện thoại"><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Nhập email"><br>
+            </div>
+
+            <div class="form-section">
+                <h3>Thông tin đăng nhập</h3>
+                <label for="username">Tên đăng nhập:</label>
+                <input type="text" id="username" placeholder="Nhập tên đăng nhập"><br>
+
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="password" placeholder="Nhập mật khẩu"><br>
+
+                <label for="confirm-password">Nhập lại mật khẩu:</label>
+                <input type="password" id="confirm-password" placeholder="Nhập lại mật khẩu"><br>
+            </div>
+
+            <button class="btn-register">Đăng ký</button>
+            <button class="btn-cancel">Hủy</button>
+        </div>
+
+        <!-- Menu phải -->
+        <div class="right-menu">
+            <div>
+                <img src="anh1.jpg" style="height: 100px; width: 70px; padding-left: 10px; padding-top: 10px;">
+                <a href="sach1.html">Sách Khoa học 5</a>
+            </div>
+            <div>
+                <img src="anh2.jpg" style="height: 100px; width: 70px; padding-left: 10px;padding-top: 10px;">
+                <a href="sach2.html">Sách Toán 5 tập 2</a>
+            </div>
+            <div>
+                <img src="anh3.jpg" style="height: 100px; width: 70px; padding-left: 10px;padding-top: 10px;">
+                <a href="sach3.html">Sách toán 5 tập 1</a>
+            </div>
+            <div>
+                <img src="anh4.jpg" style="height: 100px; width: 70px; padding-left: 10px;padding-top: 10px;">
+                <a href="sach4.html">Sách Đạo đức 5</a>
+            </div>
+            </marquee>
+            </div>
+            </div>
+            <div class="khoi22">
+            <div class="daubox2">LIÊN KẾT WEBSITE</div>
+            <div>
+            <select id="linkSelect" onchange="goToLink(this)">
+                <option value="">----Chọn trang liên kết----</option>
+                <option value="">Đại học Thủ Đô Hà Nội</option>
+                <option value="">Khoa KHTN & CN</option>
+            </select>
+            </div>
+            </div>
+            <div class="khoi33">
+            <div class="daubox3">THỐNG KÊ TRUY CẬP</div>
+            <div>
+            <strong>Tổng truy cập : 3</strong><br>
+            <strong>Đang online: 100</strong>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
